@@ -1,0 +1,11 @@
+[package]
+name = "xlsxpdf-styles"
+description = "Styles compiler with canonical style IDs and number formatting for xlsxpdf"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+xlsxpdf-core = { workspace = true }
+xlsxpdf-xml = { workspace = true }
+xlsxpdf-diagnostics = { workspace = true }

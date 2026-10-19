@@ -1,0 +1,68 @@
+[package]
+name = "xlsxpdf-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2024"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+xlsxpdf-xml = { path = "../crates/xlsxpdf-xml" }
+xlsxpdf-opc = { path = "../crates/xlsxpdf-opc" }
+xlsxpdf-model = { path = "../crates/xlsxpdf-model" }
+xlsxpdf-styles = { path = "../crates/xlsxpdf-styles" }
+xlsxpdf-drawing = { path = "../crates/xlsxpdf-drawing" }
+xlsxpdf-pdf = { path = "../crates/xlsxpdf-pdf" }
+xlsxpdf-core = { path = "../crates/xlsxpdf-core" }
+xlsxpdf-sst = { path = "../crates/xlsxpdf-sst" }
+xlsxpdf-memory = { path = "../crates/xlsxpdf-memory" }
+
+[workspace]
+members = ["."]
+
+[[bin]]
+name = "fuzz_xml_tokenizer"
+path = "fuzz_targets/fuzz_xml_tokenizer.rs"
+doc = false
+
+[[bin]]
+name = "fuzz_cell_coordinate"
+path = "fuzz_targets/fuzz_cell_coordinate.rs"
+doc = false
+
+[[bin]]
+name = "fuzz_relationship_parser"
+path = "fuzz_targets/fuzz_relationship_parser.rs"
+doc = false
+
+[[bin]]
+name = "fuzz_style_parser"
+path = "fuzz_targets/fuzz_style_parser.rs"
+doc = false
+
+[[bin]]
+name = "fuzz_drawing_anchor"
+path = "fuzz_targets/fuzz_drawing_anchor.rs"
+doc = false
+
+[[bin]]
+name = "fuzz_merge_parser"
+path = "fuzz_targets/fuzz_merge_parser.rs"
+doc = false
+
+[[bin]]
+name = "fuzz_print_settings"
+path = "fuzz_targets/fuzz_print_settings.rs"
+doc = false
+
+[[bin]]
+name = "fuzz_sheet_geometry"
+path = "fuzz_targets/fuzz_sheet_geometry.rs"
+doc = false
+
+[[bin]]
+name = "fuzz_pdf_writer"
+path = "fuzz_targets/fuzz_pdf_writer.rs"
+doc = false

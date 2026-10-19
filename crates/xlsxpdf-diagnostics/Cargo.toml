@@ -1,0 +1,6 @@
+[package]
+name = "xlsxpdf-diagnostics"
+description = "Diagnostic reporting for the xlsxpdf converter"
+version.workspace = true
+edition.workspace = true
+license.workspace = true

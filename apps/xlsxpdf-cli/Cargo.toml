@@ -1,0 +1,19 @@
+[package]
+name = "xlsxpdf-cli"
+description = "Command-line interface for the xlsxpdf converter"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "xlsxpdf"
+path = "src/main.rs"
+
+[dependencies]
+xlsxpdf-core = { workspace = true }
+xlsxpdf-opc = { workspace = true }
+xlsxpdf-model = { workspace = true }
+xlsxpdf-diagnostics = { workspace = true }
+xlsxpdf-memory = { workspace = true }
+xlsxpdf-render = { workspace = true }
+clap = { version = "4", features = ["derive"] }

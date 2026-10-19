@@ -1,0 +1,51 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/xlsxpdf-core",
+    "crates/xlsxpdf-opc",
+    "crates/xlsxpdf-xml",
+    "crates/xlsxpdf-model",
+    "crates/xlsxpdf-sst",
+    "crates/xlsxpdf-styles",
+    "crates/xlsxpdf-fonts",
+    "crates/xlsxpdf-text",
+    "crates/xlsxpdf-layout",
+    "crates/xlsxpdf-pagination",
+    "crates/xlsxpdf-drawing",
+    "crates/xlsxpdf-pdf",
+    "crates/xlsxpdf-memory",
+    "crates/xlsxpdf-diagnostics",
+    "crates/xlsxpdf-render",
+    "crates/xlsxpdf-capi",
+    "apps/xlsxpdf-cli",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/xlsxpdf/xlsxpdf"
+rust-version = "1.85"
+
+[workspace.dependencies]
+xlsxpdf-core = { path = "crates/xlsxpdf-core" }
+xlsxpdf-opc = { path = "crates/xlsxpdf-opc" }
+xlsxpdf-xml = { path = "crates/xlsxpdf-xml" }
+xlsxpdf-model = { path = "crates/xlsxpdf-model" }
+xlsxpdf-sst = { path = "crates/xlsxpdf-sst" }
+xlsxpdf-styles = { path = "crates/xlsxpdf-styles" }
+xlsxpdf-fonts = { path = "crates/xlsxpdf-fonts" }
+xlsxpdf-text = { path = "crates/xlsxpdf-text" }
+xlsxpdf-layout = { path = "crates/xlsxpdf-layout" }
+xlsxpdf-pagination = { path = "crates/xlsxpdf-pagination" }
+xlsxpdf-drawing = { path = "crates/xlsxpdf-drawing" }
+xlsxpdf-pdf = { path = "crates/xlsxpdf-pdf" }
+xlsxpdf-memory = { path = "crates/xlsxpdf-memory" }
+xlsxpdf-diagnostics = { path = "crates/xlsxpdf-diagnostics" }
+xlsxpdf-render = { path = "crates/xlsxpdf-render" }
+xlsxpdf-capi = { path = "crates/xlsxpdf-capi" }
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = "symbols"

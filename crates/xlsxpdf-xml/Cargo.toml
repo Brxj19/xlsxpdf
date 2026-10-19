@@ -1,0 +1,9 @@
+[package]
+name = "xlsxpdf-xml"
+description = "Pull/SAX-style streaming XML parser for xlsxpdf"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+xlsxpdf-core = { workspace = true }

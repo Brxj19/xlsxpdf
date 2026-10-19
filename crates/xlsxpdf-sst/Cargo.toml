@@ -1,0 +1,16 @@
+[package]
+name = "xlsxpdf-sst"
+description = "Shared string external store with bounded memory for xlsxpdf"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+xlsxpdf-core = { workspace = true }
+xlsxpdf-xml = { workspace = true }
+xlsxpdf-memory = { workspace = true }
+xlsxpdf-diagnostics = { workspace = true }
+flate2 = "1"
+
+[dev-dependencies]
+tempfile = "3"

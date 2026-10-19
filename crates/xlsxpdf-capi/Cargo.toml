@@ -1,0 +1,15 @@
+[package]
+name = "xlsxpdf-capi"
+description = "C ABI for the xlsxpdf converter"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lib]
+crate-type = ["cdylib", "staticlib"]
+
+[dependencies]
+xlsxpdf-core = { workspace = true }
+xlsxpdf-opc = { workspace = true }
+xlsxpdf-memory = { workspace = true }
+xlsxpdf-render = { workspace = true }

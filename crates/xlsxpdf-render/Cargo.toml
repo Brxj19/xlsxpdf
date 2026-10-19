@@ -1,0 +1,21 @@
+[package]
+name = "xlsxpdf-render"
+description = "Shared render loop for the xlsxpdf converter"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+xlsxpdf-core = { workspace = true }
+xlsxpdf-opc = { workspace = true }
+xlsxpdf-xml = { workspace = true }
+xlsxpdf-model = { workspace = true }
+xlsxpdf-diagnostics = { workspace = true }
+xlsxpdf-memory = { workspace = true }
+xlsxpdf-styles = { workspace = true }
+xlsxpdf-fonts = { workspace = true }
+xlsxpdf-pdf = { workspace = true }
+xlsxpdf-layout = { workspace = true }
+xlsxpdf-text = { workspace = true }
+xlsxpdf-drawing = { workspace = true }
+xlsxpdf-pagination = { workspace = true }
